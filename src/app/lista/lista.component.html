@@ -1,0 +1,11 @@
+<h1>Minha lista</h1>
+<ul>
+    <li 
+    *ngFor="let item of itens"
+     (click)="emissorDeId(item)"
+     (dblclick)="mudaCorItemEscolhido(item)"
+        [ngClass]="{'listaClasse': itemEscolhido === item }">
+        Id: {{item.id}} - Nome: {{item.nome}} - Descrição: {{item.descricao}}
+    </li>
+</ul>
+

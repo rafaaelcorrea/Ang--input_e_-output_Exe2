@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <app-lista *ngIf="itensPai.length > 0; else itensPaiVazio"[dados]="itensPai" (itemSelecionado)="noItemSelecinado($event)"></app-lista>
+  <ng-template #itensPaiVazio>
+    <p>Não há mais dado na lista. Por gentileza, recarregue a página.</p>
+  </ng-template>
+  <p *ngIf="itensPai.length > 0"> ID selecionado: {{itemSelecionado}}</p>
+  <button *ngIf="itensPai.length > 0" (click)="zerarArray()">Redefinir itens</button>
+</body>
+</html>

@@ -1,0 +1,12 @@
+li{
+    cursor: pointer;
+    width: 30%;
+}
+
+li:hover{
+    background-color: rgb(155, 154, 161);
+}
+
+.listaClasse{
+    background-color: lightblue;
+}
